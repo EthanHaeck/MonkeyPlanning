@@ -25,6 +25,7 @@ public class Planner {
         roomBananasIn = validateInput(userInput.nextLine());
 
         //set world state
+        worldState.setWorldState(roomMonkeyIn, roomBoxIn, roomBananasIn);
 
         //develop plan
 
