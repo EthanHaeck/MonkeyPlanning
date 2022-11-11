@@ -13,6 +13,15 @@ public class WorldState {
     public static final int HEIGHT_LOW = 0;
     public static final int HEIGHT_HIGH = 1;
 
+    // set the initial world state
+    public void setWorldState(String monkeyRoom, String boxRoom, String bananasRoom){
+        this.roomMonkeyIn = monkeyRoom;
+        this.roomBoxIn = boxRoom;
+        this.roomBananasIn = bananasRoom;
+        this.monkeyHeight = HEIGHT_LOW;
+        this.monkeyHasBananas = false;
+    }
+
     public String getRoomMonkeyIn(){
         return this.roomMonkeyIn;
     }
