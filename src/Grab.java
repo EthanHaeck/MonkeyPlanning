@@ -11,4 +11,15 @@ public class Grab {
         }
         return false;
     }
+
+    public WorldState applyPostconditions(WorldState worldState) {
+        //postconditions
+        // - monkey has the bananas
+        WorldState newWorldState = worldState.clone();
+
+        //grabbing the bananas is the end goal
+        newWorldState.setWinCondition();
+
+        return newWorldState;
+    }
 }

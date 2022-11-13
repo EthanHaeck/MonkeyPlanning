@@ -22,10 +22,6 @@ public class WorldState {
         this.monkeyHasBananas = false;
     }
 
-    public String getRoomMonkeyIn(){
-        return this.roomMonkeyIn;
-    }
-
     // check if the monkey is in the provided room
     public boolean isMonkeyAt(String room) {
         return this.roomMonkeyIn.equalsIgnoreCase(room);
@@ -40,8 +36,45 @@ public class WorldState {
         return false;
     }
 
+    public WorldState clone(){
+        //return a copy of the current world state
+        WorldState newWorldState = new WorldState();
+        newWorldState.roomMonkeyIn = this.roomMonkeyIn;
+        newWorldState.roomBoxIn = this.roomBoxIn;
+        newWorldState.roomBananasIn = this.roomBananasIn;
+        newWorldState.monkeyHeight = this.monkeyHeight;
+        newWorldState.monkeyHasBananas = this.monkeyHasBananas;
+        return newWorldState;
+    }
+
+    //getters and setters
+
     public String getBananaRoom(){
         return roomBananasIn;
+    }
+
+    public String getMonkeyRoom(){
+        return roomMonkeyIn;
+    }
+
+    public String getBoxRoom(){
+        return roomBoxIn;
+    }
+
+    public void setMonkeyHeight(int newHeight){
+        this.monkeyHeight = newHeight;
+    }
+
+    public void changeMonkeyRoom(String newRoom){
+        this.roomMonkeyIn = newRoom;
+    }
+
+    public void changeBoxRoom(String newRoom){
+        this.roomBoxIn = newRoom;
+    }
+
+    public void setWinCondition(){
+        this.monkeyHasBananas = true;
     }
 
 }

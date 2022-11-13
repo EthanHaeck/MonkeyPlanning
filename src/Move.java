@@ -11,6 +11,9 @@ public class Move {
     }
 
     public boolean checkPreconditions(WorldState worldState) {
+        // preconditions to move
+        // - monkey is at height LOW
+        // - monkey is in room X
         if(!worldState.isMonkeyAt(moveFrom)){
             return false;
         }
@@ -23,9 +26,12 @@ public class Move {
     }
 
     public WorldState applyPostconditions(WorldState worldState) {
-        //create and return a new WorldState
-        //with the monkey’s updated location
-        WorldState newWorldState = new WorldState();
+        //postconditions
+        // - monkey is in Room 'moveTo'
+        // - monkey is no longer in room 'moveFrom'
+        WorldState newWorldState = worldState.clone();
+
+        newWorldState.changeMonkeyRoom(moveTo);
 
         return newWorldState;
     }
