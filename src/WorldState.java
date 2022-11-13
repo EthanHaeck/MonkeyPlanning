@@ -29,11 +29,7 @@ public class WorldState {
 
     // verify the height of the monkey
     public boolean checkMonkeyHeight(int height){
-        if(monkeyHeight == height){
-            return true;
-        }
-
-        return false;
+        return monkeyHeight == height;
     }
 
     public WorldState clone(){
