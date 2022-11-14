@@ -28,13 +28,18 @@ public class Planner {
         worldState.setWorldState(roomMonkeyIn, roomBoxIn, roomBananasIn);
 
         //develop plan
+        developPlan(worldState);
+
+    }
+
+    private void developPlan(WorldState worldState){
 
     }
 
     private String validateInput(String input){
         //prompt user until input is either 'A', 'B', or 'C'
-        while (!input.equalsIgnoreCase("A") && !input.equalsIgnoreCase("B")
-                && !input.equalsIgnoreCase("C")){
+        while (!input.equalsIgnoreCase(WorldState.ROOM_A) && !input.equalsIgnoreCase(WorldState.ROOM_B)
+                && !input.equalsIgnoreCase(WorldState.ROOM_C)){
             System.out.print("Enter a valid input: ");
             input = userInput.nextLine();
         }
