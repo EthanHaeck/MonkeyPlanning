@@ -33,6 +33,13 @@ public class Planner {
     }
 
     private void developPlan(WorldState worldState){
+        //utilize either forward or backward chaining
+        //maybe use Greedy Best First
+
+        //perform actions until win condition is met
+        while(!worldState.checkWinCondition()){
+            
+        }
 
     }
 
