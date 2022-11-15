@@ -73,4 +73,8 @@ public class WorldState {
         this.monkeyHasBananas = true;
     }
 
+    public boolean checkWinCondition(){
+        return this.monkeyHasBananas;
+    }
+
 }
