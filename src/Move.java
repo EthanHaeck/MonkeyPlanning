@@ -1,7 +1,6 @@
 public class Move {
 
     //move operator
-    private String operatorName = "MOVE";
     private String moveFrom;
     private String moveTo;
 

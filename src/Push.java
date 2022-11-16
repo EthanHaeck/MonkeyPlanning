@@ -1,7 +1,6 @@
 public class Push {
 
     //push operator
-    private String operatorName = "PUSH";
     private String pushFrom;
     private String pushTo;
 
