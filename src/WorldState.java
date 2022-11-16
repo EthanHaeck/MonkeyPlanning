@@ -43,6 +43,27 @@ public class WorldState {
         return newWorldState;
     }
 
+    public boolean equals(WorldState providedState){
+        if(!providedState.roomMonkeyIn.equalsIgnoreCase(this.roomMonkeyIn)){
+            return false;
+        }
+        if(!providedState.roomBoxIn.equalsIgnoreCase(this.roomBoxIn)){
+            return false;
+        }
+        if(!providedState.roomBananasIn.equalsIgnoreCase(this.roomBananasIn)){
+            return false;
+        }
+        if(providedState.monkeyHeight != this.monkeyHeight){
+            return false;
+        }
+        if(providedState.monkeyHasBananas != this.monkeyHasBananas){
+            return false;
+        }
+
+        //all world variables are the same
+        return true;
+    }
+
     //getters and setters
 
     public String getBananaRoom(){
